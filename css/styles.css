@@ -116,8 +116,7 @@ button {
   background-color: transparent;
 }
 
-.icon-menu-mobile {
-  display: block;
+.icon-menu-mobile-open {
   fill: #2f2f37;
 }
 
@@ -219,12 +218,15 @@ button {
   }
 }
 
+/* menu-mobile */
+
 .menu-mobile {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 999;
   overflow: scroll;
   background-color: #ffffff;
 
@@ -254,8 +256,6 @@ button {
 
   padding-top: 72px;
   padding-bottom: 40px;
-
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-menu-mobile-close {
@@ -319,5 +319,272 @@ button {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.tel-blue {
   color: #4d5ae5;
+}
+
+.list-icon-menu-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+  margin-top: 48px;
+}
+
+.item-icon-menu-mobile {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.link-icon-menu-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+
+.icon-menu-mobile {
+  fill: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+
+.section-main {
+  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/mobile/fon-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  max-width: 320px;
+  height: 100%;
+  margin: auto;
+}
+
+.title-main {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #ffffff;
+  max-width: 216px;
+  padding-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-main .button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  display: block;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .section-main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/mobile/fon-mobile@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/tablet/fon-tablet@1x.jpg');
+    padding-top: 112px;
+    padding-bottom: 112px;
+    max-width: 768px;
+  }
+
+  .title-main {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    padding-bottom: 36px;
+  }
+
+  .section-main .button {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .section-main .button:hover,
+  .section-main .button:focus {
+    background-color: #404bbf;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .section-main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/tablet/fon-tablet@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section-main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/desktop/fon-desktop@1x.jpg');
+    padding-top: 188px;
+    padding-bottom: 188px;
+    max-width: 1440px;
+  }
+
+  .title-main {
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .section-main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/desktop/fon-desktop@2x.jpg');
+  }
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.cont-icon-theses {
+  display: none;
+}
+
+.list-theses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+
+.item-theses {
+  width: 100%;
+}
+
+.item-theses .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.item-theses .text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .list-theses {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .item-theses {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .item-theses .title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .list-theses {
+    gap: 24px;
+  }
+
+  .item-theses {
+    width: calc((100% - 72px) / 4);
+  }
+
+  .cont-icon-theses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 100%;
+    height: 112px;
+    margin-bottom: 8px;
+  }
+
+  .item-theses .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .item-theses .text {
+    font-weight: 400;
+  }
 }
